@@ -1,0 +1,62 @@
+﻿<Page x:Class="AeroProd.HeadWorkShopareaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AeroProd"
+      mc:Ignorable="d" 
+      d:DesignHeight="848" d:DesignWidth="1920"
+      Title="HeadWorkShopareaPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="20,20,200,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64*"/>
+                <RowDefinition Height="320*"/>
+            </Grid.RowDefinitions>
+            <DataGrid x:Name="AreaGrid" Grid.Row="1" IsReadOnly="True"/>
+            <TextBlock Text="Список участников" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="48"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="51*"/>
+                <RowDefinition Height="268*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
+            <DataGrid x:Name="BrigadeGrid" Grid.Row="1" IsReadOnly="True"/>
+            <TextBlock Text="Список бригад" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="36"/>
+            <Button x:Name="AddtoArea" Grid.Row="2" Margin="5" Content="Назначить на участок" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20" Background="#B5D3DA" Click="AddtoArea_Click"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Margin="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="51*"/>
+                <RowDefinition Height="268*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
+            <DataGrid x:Name="EmployeeGrid" Grid.Row="1" IsReadOnly="True"/>
+            <TextBlock Text="Список сотрудников" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="36"/>
+            <Button x:Name="AddtoBrigade" Grid.Row="2" Margin="5" Content="Назначить в бригаду" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20" Background="#B5D3DA" Click="AddtoBrigade_Click"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="Выход" Margin="40" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20" Background="#B5D3DA" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+</Page>

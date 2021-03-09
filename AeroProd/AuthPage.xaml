@@ -1,0 +1,18 @@
+﻿<Page x:Class="AeroProd.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AeroProd"
+      mc:Ignorable="d" 
+      d:DesignHeight="848" d:DesignWidth="1920"
+      Title="AuthPage">
+
+    <Grid>
+        <TextBox x:Name="LoginBox" Margin="608,224,587,528" TextWrapping="Wrap" FontSize="50" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+        <Button x:Name="AuthoriationButton" Content="Авторизоваться" HorizontalAlignment="Left" Background="#B5D3DA" Margin="747,617,0,0" VerticalAlignment="Top" Width="460" Height="92" FontSize="42" FontFamily="/AeroProd;component/Fonts/#Roboto" Click="AuthoriationButton_Click"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="608,366,0,0" VerticalAlignment="Top" Height="59" Width="272" FontSize="42" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="608,165,0,0" VerticalAlignment="Top" Height="59" Width="272" FontSize="42" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+        <PasswordBox  x:Name="PasswordBox" Margin="608,425,587,327" FontSize="50" IsTabStop="False" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+    </Grid>
+</Page>

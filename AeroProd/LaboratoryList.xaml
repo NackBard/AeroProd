@@ -1,0 +1,58 @@
+﻿<Page x:Class="AeroProd.LaboratoryList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AeroProd"
+      mc:Ignorable="d" 
+      d:DesignHeight="848" d:DesignWidth="1920"
+      Title="LaboratoryList">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Наиенование лаборатории" VerticalAlignment="Bottom" FontSize="36" Margin="10" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+            <TextBox x:Name="LabName" Grid.Row="1" Grid.Column="0" Margin="10" FontSize="25" FontFamily="Roboto"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Назначение лаборатории" VerticalAlignment="Bottom" FontSize="36" Margin="10" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+            <ComboBox x:Name="TargetBox" Grid.Row="3" Grid.Column="0" Margin="10" FontSize="25" FontFamily="Roboto"/>
+            <Button x:Name="UpdateLabButton" Grid.Row="4" Background="#B5D3DA" Grid.Column="0" Margin="10" Content="Изменить" FontSize="25" FontFamily="/AeroProd;component/Fonts/#Roboto" Click="UpdateLabButton_Click"/>
+            <DataGrid x:Name="LabGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="4" IsReadOnly="True" SelectionChanged="LabGrid_SelectionChanged"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="Список лабораторий" VerticalAlignment="Bottom" Margin="10" FontSize="36" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Назначение" VerticalAlignment="Bottom" FontSize="36" Margin="10" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+            <TextBox x:Name="NameTargetBox" Grid.Row="1" Grid.Column="0" Margin="10" FontSize="25" FontFamily="Roboto"/>
+            <Button x:Name="UpdateTargetButton" Grid.Row="2" Grid.Column="0" Margin="10" Content="Изменить" Background="#B5D3DA" FontSize="25" FontFamily="/AeroProd;component/Fonts/#Roboto" Click="UpdateTargetButton_Click"/>
+            <DataGrid x:Name="TargetGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" IsReadOnly="True" SelectionChanged="TargetGrid_SelectionChanged"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="Список назначений" VerticalAlignment="Bottom" Margin="10" FontSize="36" FontFamily="/AeroProd;component/Fonts/#Roboto"/>
+            <Button x:Name="ExitButton" Grid.Column="0" Grid.Row="3" Margin="10" Content="Выход" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" Background="#B5D3DA" Click="ExitButton_Click"/>
+        </Grid>
+    </Grid>
+</Page>

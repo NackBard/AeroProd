@@ -1,0 +1,26 @@
+﻿<Page x:Class="AeroProd.ForemanPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AeroProd"
+      mc:Ignorable="d" 
+      d:DesignHeight="848" d:DesignWidth="1920"
+      Title="ForemanPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ExitButton" Margin="20" Grid.Column="3" Background="#B5D3DA" FontSize="36" FontFamily="/AeroProd;component/Fonts/#Roboto" Content="Выход" Click="ExitButton_Click"/>
+        <Button x:Name="Brigades" Margin="20" Background="#B5D3DA" FontSize="36" FontFamily="/AeroProd;component/Fonts/#Roboto" Content="Состав бригады" Click="Brigades_Click"/>
+        <DataGrid x:Name="BrigadeGrid" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="30" SelectionChanged="BrigadeGrid_SelectionChanged" IsReadOnly="True"/>
+    </Grid>
+</Page>

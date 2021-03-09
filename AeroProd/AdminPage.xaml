@@ -1,0 +1,105 @@
+﻿<Page x:Class="AeroProd.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AeroProd"
+      mc:Ignorable="d" 
+      d:DesignHeight="848" d:DesignWidth="1920"
+      Title="AdminPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="301*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" MinHeight="72" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.ColumnSpan="4" TextWrapping="Wrap" Text="Список сотрудников" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="36"/>
+            <Button x:Name="DeleteEmployeeButton" Grid.Row="2" Background="#B5D3DA" Content="Удалить"  FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="DeleteEmployeeButton_Click"/>
+            <Button x:Name="AddEmployeeButton" Grid.Row="2" Background="#B5D3DA" Grid.Column="1" Content="Добавить"  FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="AddEmployeeButton_Click"/>
+            <Button x:Name="UpdateButton" Grid.Row="2" Background="#B5D3DA" Grid.Column="2"  Content="Обновить"  FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="UpdateButton_Click"/>
+            <Button x:Name="ProfileButton" Grid.Row="2" Background="#B5D3DA" Grid.Column="3" Content="Профиль сотрудника"  FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="ProfileButton_Click"/>
+            <DataGrid x:Name="EmployeeGrid" Grid.Row="1" Grid.ColumnSpan="4" FontFamily="/AeroProd;component/Fonts/#Roboto" IsReadOnly="True" SelectionChanged="EmployeeGrid_SelectionChanged" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" MinHeight="76" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" TextWrapping="Wrap" Text="Список пользователей" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="36"/>
+            <DataGrid x:Name="UserGrid"  FontFamily="/AeroProd;component/Fonts/#Roboto" Grid.Row="1" Grid.ColumnSpan="2" IsReadOnly="True" SelectionChanged="UserGrid_SelectionChanged"/>
+            <Button x:Name="DeleteUserButton" Content="Удалить" Background="#B5D3DA" FontFamily="/AeroProd;component/Fonts/#Roboto" Grid.Row="2" Grid.Column="0" FontSize="22" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="DeleteUserButton_Click"/>
+            <Button x:Name="AddUserButton" Content="Добавить" Background="#B5D3DA" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="AddUserButton_Click"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0" Margin="50,50,150,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="UpdateButtonEmployee" Grid.Row ="10" Background="#B5D3DA" Content="Изменить" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="UpdateButtonEmployee_Click" />
+            <ComboBox x:Name="PostBox" Grid.Row="9"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0,0,0,10" FontSize="30"/>
+            <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Фамилия" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <TextBlock Grid.Row="8" TextWrapping="Wrap" Text="Должность" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <TextBlock Grid.Row="0"  TextWrapping="Wrap" Text="Имя" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <TextBox x:Name="NameBox" TextWrapping="Wrap" Grid.Row="1" FontSize="30" FontFamily="/AeroProd;component/Fonts/#Roboto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"/>
+            <TextBox x:Name="LastNameBox"  TextWrapping="Wrap" Grid.Row="3" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="30" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"/>
+            <TextBlock Grid.Row="4" TextWrapping="Wrap" Text="Отчество" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <TextBox x:Name="PatronymicBox"  TextWrapping="Wrap" Grid.Row="5" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="30" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="50,0,150,100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="LoginBox" Grid.Row="1"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" TextWrapping="Wrap" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="30"/>
+            <TextBox x:Name="PasswordBox" Grid.Row="3"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  TextWrapping="Wrap"  FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="30" Margin="0,0,0,10" />
+            <Button x:Name="UpdateButtonUser" Content="Изменить" Background="#B5D3DA"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Grid.Row="8" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="22" Click="UpdateButtonUser_Click" />
+            <TextBlock Grid.Row="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" TextWrapping="Wrap" Text="Логин" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20" />
+            <TextBlock Grid.Row="2"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" TextWrapping="Wrap" Text="Пароль" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <TextBlock Grid.Row="4"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" TextWrapping="Wrap" Text="Уровень доступа" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <TextBlock Grid.Row="6"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" TextWrapping="Wrap" Text="Сотрудник" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="20"/>
+            <ComboBox x:Name="LevelBox" Grid.Row="5"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0,0,0,10" FontSize="30"/>
+            <ComboBox x:Name="EmployeeBox" Grid.Row="7"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0,0,0,10" FontSize="30"/>
+        </Grid>
+        <Button x:Name="ExitButton" Content="Выход" Background="#B5D3DA" Margin="10,0,0,10" FontSize="22" FontFamily="/AeroProd;component/Fonts/#Roboto" HorizontalAlignment="Left" Width="341" Height="66" VerticalAlignment="Bottom" Grid.Row="1" Click="ExitButton_Click"/>
+    </Grid>
+</Page>

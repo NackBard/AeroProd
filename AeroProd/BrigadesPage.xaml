@@ -1,0 +1,25 @@
+﻿<Page x:Class="AeroProd.BrigadesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AeroProd"
+      mc:Ignorable="d" 
+      d:DesignHeight="848" d:DesignWidth="1920"
+      Title="BrigadesPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="173*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BackButton" Margin="20" Grid.Column="0" Grid.Row="0" Background="#B5D3DA" FontFamily="/AeroProd;component/Fonts/#Roboto" FontSize="28" Content="Назад" Click="BackButton_Click"/>
+        <DataGrid x:Name="BrigadeList" Grid.Row="2" Grid.ColumnSpan="4" Margin="30" IsReadOnly="True"/>
+    </Grid>
+</Page>
