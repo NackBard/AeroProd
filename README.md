@@ -76,7 +76,7 @@ AeroProd/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/AeroProd.git
+   git clone https://github.com/NackBard/AeroProd.git
    ```
 
 2. Create the database in SQL Server Management Studio (database name: `AeroProd`).
