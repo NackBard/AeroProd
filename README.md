@@ -2,10 +2,6 @@
 
 A desktop enterprise management system for an aerospace production facility, built with **WPF (.NET Framework)**. The application implements role-based access control with 6 distinct user roles, each with a tailored interface for their responsibilities.
 
-## 📸 Screenshots
-
-> _Add screenshots of the app here_
-
 ## ✨ Features
 
 - 🔐 **Role-based authentication** — 6 access levels with individual dashboards per role
