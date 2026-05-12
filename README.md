@@ -101,18 +101,6 @@ AeroProd/
 - `Report` — tester reports with file paths and content
 - `Laboratory` — labs with assigned targets
 
-## 🔮 Roadmap
-
-- [ ] Parameterized SQL queries (prevent SQL injection)
-- [ ] Password hashing
-- [ ] Export reports to PDF/Excel
-- [ ] Search and pagination in data grids
-- [ ] Audit log for admin actions
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 > Built with ❤️ using C#, WPF and ADO.NET
